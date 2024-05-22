@@ -2,23 +2,21 @@
 local webhook = "https://discord.com/api/webhooks/1242018382652506122/HnhCq0VFyIxOli6Y39J-Ht4_ngZgUiGdYeSwNisHh3UZ5bV17ZBRL3W4Zx3KZ2fdXFqX"
 
 -- Function to send a message to Discord
-function SendToDiscord(username, gameName, profileLink, avatarUrl)
+local function SendToDiscord(gameName, executorName, device, accountAge, playerFields, playerCount)
     -- Constructing the message payload in JSON format
     local data = {
         ["embeds"] = {{
-            ["title"] = ":sparkles: Script Execution :sparkles:",
-            ["description"] = ":information_source: **" .. username .. "** has executed the script in **" .. gameName .. "**. :video_game:",
+            ["title"] = ":sparkles: *Script Execution Notification* :sparkles:",
+            ["description"] = ":information_source: **_" .. executorName .. "_** has executed the script in **_" .. gameName .. "_**. :video_game:",
             ["color"] = tonumber("FFD700", 16), -- Setting color to gold
             ["fields"] = {
-                {["name"] = "Roblox Profile", ["value"] = "[View Profile](" .. profileLink .. ")", ["inline"] = true},
-                {["name"] = "Execution Time", ["value"] = os.date("%Y-%m-%d %H:%M:%S"), ["inline"] = true}
+                {["name"] = "*Executor*", ["value"] = "**_" .. executorName .. "_**", ["inline"] = true},
+                {["name"] = "*Device*", ["value"] = "**_" .. device .. "_**", ["inline"] = true},
+                {["name"] = "*Account Age (days)*", ["value"] = "**_" .. tostring(accountAge) .. "_**", ["inline"] = true},
+                {["name"] = "*Total Players*", ["value"] = "**_" .. tostring(playerCount) .. "_**", ["inline"] = true},
+                table.unpack(playerFields)
             },
-            ["author"] = {
-                ["name"] = username,
-                ["icon_url"] = avatarUrl
-            },
-            ["thumbnail"] = {["url"] = avatarUrl},
-            ["footer"] = {["text"] = "Created by Emmanuelbb4", ["icon_url"] = "https://openai.com/favicon.ico"},
+            ["footer"] = {["text"] = "*Created by Emmanuelbb4*", ["icon_url"] = "https://openai.com/favicon.ico"},
             ["timestamp"] = os.date("!%Y-%m-%dT%H:%M:%SZ") -- UTC time in ISO 8601 format
         }}
     }
@@ -46,15 +44,60 @@ function SendToDiscord(username, gameName, profileLink, avatarUrl)
     end
 end
 
--- Fetching username of the local player
-local username = game.Players.LocalPlayer.Name
--- Fetching name of the game
-local gameName = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
--- Fetching user ID of the local player
-local userId = game.Players.LocalPlayer.UserId
--- Constructing the link to the user's Roblox profile
-local profileLink = "https://www.roblox.com/users/" .. userId .. "/profile"
--- Fetching the avatar URL of the local player
-local avatarUrl = "https://www.roblox.com/headshot-thumbnail/image?userId=" .. userId .. "&width=150&height=150&format=png"
--- Calling the function to send message to Discord
-SendToDiscord(username, gameName, profileLink, avatarUrl)
+-- Function to collect player data and send it to Discord
+local function CheckAndSendPlayerData(executorName, device, accountAge)
+    -- Fetching the name of the game
+    local gameName = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
+    -- Fetching the list of players in the server
+    local players = game.Players:GetPlayers()
+    local playerCount = #players
+    local playerFields = {}
+
+    for _, player in ipairs(players) do
+        table.insert(playerFields, {
+            ["name"] = "*Player*",
+            ["value"] = "**_" .. player.Name .. "_**",
+            ["inline"] = true
+        })
+        table.insert(playerFields, {
+            ["name"] = "*Profile*",
+            ["value"] = "[View Profile](https://www.roblox.com/users/" .. player.UserId .. "/profile)",
+            ["inline"] = true
+        })
+    end
+
+    -- Calling the function to send message to Discord
+    SendToDiscord(gameName, executorName, device, accountAge, playerFields, playerCount)
+end
+
+-- Function to get the device name
+local function GetDeviceName()
+    local device = ""
+    if game:GetService("UserInputService").TouchEnabled then
+        device = "Mobile"
+    elseif game:GetService("UserInputService").KeyboardEnabled then
+        device = "PC"
+    else
+        device = "Console"
+    end
+    return device
+end
+
+-- Function to get the account age in days
+local function GetAccountAge(player)
+    return player.AccountAge
+end
+
+-- Fetching the username of the executor (local player)
+local executor = game.Players.LocalPlayer
+local executorName = executor.Name
+-- Fetching the device name
+local deviceName = GetDeviceName()
+-- Fetching the account age in days
+local accountAge = GetAccountAge(executor)
+
+-- Loop to repeatedly check the player data and send to Discord every 10 seconds
+while true do
+    CheckAndSendPlayerData(executorName, deviceName, accountAge)
+    wait(10) -- Wait for 10 seconds before repeating
+end
