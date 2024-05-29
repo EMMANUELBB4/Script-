@@ -16,7 +16,7 @@ local DB = false
 --//Notification\\--
 game.StarterGui:SetCore("SendNotification", {
 	Title = "Notification",
-	Text = "Best ESP by.ExluZive" ,
+	Text = "Best ESP by.Emmanuelbb4" ,
 	Button1 = "Shut Up",
 	Duration = math.huge
 })
