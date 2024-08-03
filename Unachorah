@@ -1,0 +1,15 @@
+local args = {
+    [1] = "SyncAnchor",
+    [2] = {}
+}
+
+for _, part in pairs(workspace:GetDescendants()) do
+    if part:IsA("BasePart") then
+        table.insert(args[2], {
+            ["Part"] = part,
+            ["Anchored"] = false
+        })
+    end
+end
+
+game:GetService("Players").LocalPlayer.Backpack.Folder.SyncAPI.ServerEndpoint:InvokeServer(unpack(args))
