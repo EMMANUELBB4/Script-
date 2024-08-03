@@ -1,7 +1,7 @@
 local args = {
     [1] = "CreatePart",
     [2] = "Normal",
-    [3] = CFrame.new(30.200054168701172, 30.041641235351562, -34.418312072753906) * CFrame.Angles(-0, 0, -0),
+    [3] = CFrame.new(7444.091796875, 5312.509765625, 4268.94580078125) * CFrame.Angles(-0, 0, -0),
     [4] = workspace
 }
 
@@ -9,7 +9,7 @@ game:GetService("Players").LocalPlayer.Backpack.Folder.SyncAPI.ServerEndpoint:In
 local args = {
     [1] = "CreatePart",
     [2] = "Normal",
-    [3] = CFrame.new(30.200054168701172, 30.041641235351562, -34.418312072753906) * CFrame.Angles(-0, 0, -0),
+    [3] = CFrame.new(7444.091796875, 5312.509765625, 4268.94580078125) * CFrame.Angles(-0, 0, -0),
     [4] = workspace
 }
 
@@ -17,7 +17,7 @@ game:GetService("Players").LocalPlayer.Backpack.Folder.SyncAPI.ServerEndpoint:In
 local args = {
     [1] = "CreatePart",
     [2] = "Normal",
-    [3] = CFrame.new(30.200054168701172, 30.041641235351562, -34.418312072753906) * CFrame.Angles(-0, 0, -0),
+    [3] = CFrame.new(7444.091796875, 5312.509765625, 4268.94580078125) * CFrame.Angles(-0, 0, -0),
     [4] = workspace
 }
 
@@ -25,7 +25,7 @@ game:GetService("Players").LocalPlayer.Backpack.Folder.SyncAPI.ServerEndpoint:In
 local args = {
     [1] = "CreatePart",
     [2] = "Normal",
-    [3] = CFrame.new(30.200054168701172, 30.041641235351562, -34.418312072753906) * CFrame.Angles(-0, 0, -0),
+    [3] = CFrame.new(7444.091796875, 5312.509765625, 4268.94580078125) * CFrame.Angles(-0, 0, -0),
     [4] = workspace
 }
 
@@ -33,7 +33,7 @@ game:GetService("Players").LocalPlayer.Backpack.Folder.SyncAPI.ServerEndpoint:In
 local args = {
     [1] = "CreatePart",
     [2] = "Normal",
-    [3] = CFrame.new(30.200054168701172, 30.041641235351562, -34.418312072753906) * CFrame.Angles(-0, 0, -0),
+    [3] = CFrame.new(7444.091796875, 5312.509765625, 4268.94580078125) * CFrame.Angles(-0, 0, -0),
     [4] = workspace
 }
 
@@ -41,7 +41,7 @@ game:GetService("Players").LocalPlayer.Backpack.Folder.SyncAPI.ServerEndpoint:In
 local args = {
     [1] = "CreatePart",
     [2] = "Normal",
-    [3] = CFrame.new(30.200054168701172, 30.041641235351562, -34.418312072753906) * CFrame.Angles(-0, 0, -0),
+    [3] = CFrame.new(7444.091796875, 5312.509765625, 4268.94580078125) * CFrame.Angles(-0, 0, -0),
     [4] = workspace
 }
 
@@ -49,7 +49,7 @@ game:GetService("Players").LocalPlayer.Backpack.Folder.SyncAPI.ServerEndpoint:In
 local args = {
     [1] = "CreatePart",
     [2] = "Normal",
-    [3] = CFrame.new(30.200054168701172, 30.041641235351562, -34.418312072753906) * CFrame.Angles(-0, 0, -0),
+    [3] = CFrame.new(7444.091796875, 5312.509765625, 4268.94580078125) * CFrame.Angles(-0, 0, -0),
     [4] = workspace
 }
 
@@ -57,7 +57,7 @@ game:GetService("Players").LocalPlayer.Backpack.Folder.SyncAPI.ServerEndpoint:In
 local args = {
     [1] = "CreatePart",
     [2] = "Normal",
-    [3] = CFrame.new(30.200054168701172, 30.041641235351562, -34.418312072753906) * CFrame.Angles(-0, 0, -0),
+    [3] = CFrame.new(7444.091796875, 5312.509765625, 4268.94580078125) * CFrame.Angles(-0, 0, -0),
     [4] = workspace
 }
 
@@ -65,7 +65,7 @@ game:GetService("Players").LocalPlayer.Backpack.Folder.SyncAPI.ServerEndpoint:In
 local args = {
     [1] = "CreatePart",
     [2] = "Normal",
-    [3] = CFrame.new(30.200054168701172, 30.041641235351562, -34.418312072753906) * CFrame.Angles(-0, 0, -0),
+    [3] = CFrame.new(7444.091796875, 5312.509765625, 4268.94580078125) * CFrame.Angles(-0, 0, -0),
     [4] = workspace
 }
 
@@ -73,7 +73,7 @@ game:GetService("Players").LocalPlayer.Backpack.Folder.SyncAPI.ServerEndpoint:In
 local args = {
     [1] = "CreatePart",
     [2] = "Normal",
-    [3] = CFrame.new(30.200054168701172, 30.041641235351562, -34.418312072753906) * CFrame.Angles(-0, 0, -0),
+    [3] = CFrame.new(7444.091796875, 5312.509765625, 4268.94580078125) * CFrame.Angles(-0, 0, -0),
     [4] = workspace
 }
 
@@ -81,7 +81,7 @@ game:GetService("Players").LocalPlayer.Backpack.Folder.SyncAPI.ServerEndpoint:In
 local args = {
     [1] = "CreatePart",
     [2] = "Normal",
-    [3] = CFrame.new(30.200054168701172, 30.041641235351562, -34.418312072753906) * CFrame.Angles(-0, 0, -0),
+    [3] = CFrame.new(7444.091796875, 5312.509765625, 4268.94580078125) * CFrame.Angles(-0, 0, -0),
     [4] = workspace
 }
 
@@ -89,7 +89,7 @@ game:GetService("Players").LocalPlayer.Backpack.Folder.SyncAPI.ServerEndpoint:In
 local args = {
     [1] = "CreatePart",
     [2] = "Normal",
-    [3] = CFrame.new(30.200054168701172, 30.041641235351562, -34.418312072753906) * CFrame.Angles(-0, 0, -0),
+    [3] = CFrame.new(7444.091796875, 5312.509765625, 4268.94580078125) * CFrame.Angles(-0, 0, -0),
     [4] = workspace
 }
 
@@ -97,8 +97,44 @@ game:GetService("Players").LocalPlayer.Backpack.Folder.SyncAPI.ServerEndpoint:In
 local args = {
     [1] = "CreatePart",
     [2] = "Normal",
-    [3] = CFrame.new(30.200054168701172, 30.041641235351562, -34.418312072753906) * CFrame.Angles(-0, 0, -0),
+    [3] = CFrame.new(7444.091796875, 5312.509765625, 4268.94580078125) * CFrame.Angles(-0, 0, -0),
     [4] = workspace
 }
 
 game:GetService("Players").LocalPlayer.Backpack.Folder.SyncAPI.ServerEndpoint:InvokeServer(unpack(args))
+local args = {
+    [1] = "CreatePart",
+    [2] = "Normal",
+    [3] = CFrame.new(7444.091796875, 5312.509765625, 4268.94580078125) * CFrame.Angles(-0, 0, -0),
+    [4] = workspace
+}
+
+game:GetService("Players").LocalPlayer.Backpack.Folder.SyncAPI.ServerEndpoint:InvokeServer(unpack(args))
+local args = {
+    [1] = "CreatePart",
+    [2] = "Normal",
+    [3] = CFrame.new(7444.091796875, 5312.509765625, 4268.94580078125) * CFrame.Angles(-0, 0, -0),
+    [4] = workspace
+}
+
+game:GetService("Players").LocalPlayer.Backpack.Folder.SyncAPI.ServerEndpoint:InvokeServer(unpack(args))
+local args = {
+    [1] = "CreatePart",
+    [2] = "Normal",
+    [3] = CFrame.new(7444.091796875, 5312.509765625, 4268.94580078125) * CFrame.Angles(-0, 0, -0),
+    [4] = workspace
+}
+
+game:GetService("Players").LocalPlayer.Backpack.Folder.SyncAPI.ServerEndpoint:InvokeServer(unpack(args))
+local args = {
+    [1] = "CreatePart",
+    [2] = "Normal",
+    [3] = CFrame.new(7444.091796875, 5312.509765625, 4268.94580078125) * CFrame.Angles(-0, 0, -0),
+    [4] = workspace
+}
+
+game:GetService("Players").LocalPlayer.Backpack.Folder.SyncAPI.ServerEndpoint:InvokeServer(unpack(args))
+local args = {
+    [1] = "CreatePart",
+    [2] = "Normal",
+    [3] = CFrame.new(7444.091796875, 5312.509765625, 4268.94580078125) * CFrame
