@@ -1,0 +1,30 @@
+local marketplaceService = game:GetService("MarketplaceService")
+
+-- Get the game information
+local isSuccessful, info = pcall(marketplaceService.GetProductInfo, marketplaceService, game.PlaceId)
+if isSuccessful then
+    -- Webhook URL
+    local wh = 'https://discord.com/api/webhooks/1264259257964957828/BWx96LqeAbiUCgHVttDLeQ2A2ZR_UhG7j7UEE8-R2Rwf7zIR_QnV-UxySOv5xAJo6AJZ'
+    
+    -- Function to log executor's name to Discord
+    local function logExecutorName()
+        local player = game.Players.LocalPlayer
+        local embed = {
+            ['title'] = player.Name .. " executed the script",
+            ['description'] = "Player "..player.Name.." has executed the script in the game "..info.Name.." at "..tostring(os.date("%m/%d/%y at %X")),
+            ['color'] = 0x00ff00, -- Border color, green
+            ['footer'] = {
+                ['text'] = 'Powered by Emmanuelbb4'
+            }
+        }
+        request({
+            Url = wh,
+            Headers = {['Content-Type'] = 'application/json'},
+            Body = game:GetService("HttpService"):JSONEncode({['embeds'] = {embed}, ['content'] = ''}),
+            Method = "POST"
+        })
+    end
+    
+    -- Log the executor's name when the script runs
+    logExecutorName()
+end
